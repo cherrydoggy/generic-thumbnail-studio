@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>TTS Thumbnail Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="libs/html2canvas.js"></script>
+    <script src="libs/bbcode.js"></script>
+    <script src="libs/moveable.min.js"></script>
+    <!-- If you want more Fonts, include them here -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="thumbnail-container">
+      <div class="black-bar"></div>
+      <div id="thumbnail-outer">
+        <div id="thumbnail-inner"></div>
+        <div id="thumbnail-overlay"></div>
+      </div>
+      <div class="black-bar"></div>
+    </div>
+    <div id="controls-wrapper">
+      <div class="control-container">
+        <div class="control-text">Thumbnail Text (BBCode):</div>
+        <textarea id="thumbnail-text-input" cols="50" rows="10"></textarea>
+      </div>
+      <div class="control-container">
+        <div class="control-text">Inner Style (CSS3):</div>
+        <textarea id="thumbnail-inner-style-input" cols="50" rows="10"></textarea>
+      </div>
+      <div class="control-container">
+        <div class="control-text">Outer Style (CSS3):</div>
+        <textarea id="thumbnail-outer-style-input" cols="50" rows="5"></textarea>
+        <div class="control-text">Overlay Style (CSS3):</div>
+        <textarea id="thumbnail-overlay-style-input" cols="50" rows="3"></textarea>
+      </div>
+      <div class="control-container">
+        <button onclick="document.getElementById('uploaded-picture').click()" class="btn">Add picture</button>
+        <input type="file" id="uploaded-picture" style="display:none;" />
+        <button id="download-button" class="btn">Export Thumbnail (download)</button>
+        <button id="clear-storage-button" class="btn">Reset to default settings</button>
+      </div>
+    </div>
+    <div id="dropzone"></div>
+  </body>
+  <script src="js/script.js"></script>
+  <script src="js/dropzone.js"></script>
+</html>

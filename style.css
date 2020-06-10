@@ -1,0 +1,117 @@
+body {
+  text-align:center;
+  margin:0px;
+  overflow:hidden;
+}
+
+#thumbnail-container {
+  display:-webkit-box;
+  width:1280px;
+  height:720px;
+}
+
+#thumbnail-outer {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  position: relative;
+}
+
+#thumbnail-inner {
+  height: -webkit-fill-available;
+  text-shadow: var(--outline-thickness) var(--outline-thickness) 0 var(--outline-color), var(--outline-thickness) calc(var(--outline-thickness)*(-1)) 0 var(--outline-color), calc(var(--outline-thickness)*(-1)) var(--outline-thickness) 0 var(--outline-color), calc(var(--outline-thickness)*(-1)) calc(var(--outline-thickness)*(-1)) 0 var(--outline-color), var(--outline-thickness) 0px 0 var(--outline-color), 0px var(--outline-thickness) 0 var(--outline-color), calc(var(--outline-thickness)*(-1)) 0px 0 var(--outline-color), 0px calc(var(--outline-thickness)*(-1)) 0 var(--outline-color);
+  white-space: pre-line;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 50;
+  position: relative;
+  pointer-events:none;
+  user-select: none;
+}
+
+#thumbnail-overlay {
+  position:absolute;
+  pointer-events:none;
+  user-select: none;
+  z-index: 9999999;
+  box-sizing: border-box;
+  height:720px;
+  width:1280px;
+  top:0px;
+  left:0px;
+}
+
+.control-container {
+  display:inline-block;
+}
+
+#controls-wrapper {
+  display: flex;
+    overflow: auto;
+
+    z-index: 10000;
+    position: sticky;
+    user-select: none;
+    padding: 28px;
+    /* justify-items: center; */
+    /* width: -webkit-fill-available; */
+    user-select: none;
+    background-color: #232323;
+    color: white;
+    /* text-align: center; */
+    /* justify-content: center; */
+    box-sizing: border-box;
+    height: calc(100vh - 720px);
+
+}
+
+.btn {
+  margin: 20px;
+}
+
+
+.control-text {
+  display: block;
+}
+
+#dropzone {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  position: fixed;
+  display:none;
+}
+
+#dropzone.active {
+  display:block;
+  background: #00ff0069;
+  border: dashed 15px #228400;
+}
+
+/*
+.moveable-image-outer {
+  width:350px;height:350px;display:inline-block;background:green;position:absolute
+} what the fuck
+*/
+
+.moveable-image-inner {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  background-size: 100% 100%;
+  pointer-events: none;
+}
+
+#moveable {
+  width:350px;height:350px;display:inline-block;position:absolute;
+  left: 0px;
+    top: 0px;
+}
+
+.black-bar {
+  height: 720px;
+  background: #232323;
+  width: calc((100vw - 1280px) / 2);
+  z-index: 100000000;
+  position: relative;
+}
