@@ -72,7 +72,7 @@ const createTwoWayStyleInputBind = (name, styleElement, inputElement, defaultVal
     name: name,
     defaultValue: defaultValue,
     handleParentValueUpdate: val => styleElement.setAttribute('style', val),
-    handleChildValueUpdate: val => { if (!document.hasFocus()) inputElement.value = val.replace(/;(?=[^\n])/g, ';\n') },
+    handleChildValueUpdate: val => { if (!document.hasFocus() || document.activeElement !== inputElement) inputElement.value = val.replace(/;(?=[^\n])/g, ';\n') },
     listenForChildValueUpdate: handleChildValueUpdate => setInterval(() => {
       handleChildValueUpdate(styleElement.attributes.style.value)
     }, 1000),
