@@ -13,3 +13,6 @@ Bangers, Special Elite, Sigmar One, Chewy, Luckiest Guy, Balsamiq Sans. Feel fre
 
 # future
 This app is currently very simple. A basic understanding of CSS and HTML might be require to utilize it efficiently. In the future the app will be easier to use for non-programmers.
+
+# support
+If you need support with this app or want to set up your own Reddit TTS Compilation channel, add me on discord: cherrydog#1778
